@@ -1,0 +1,22 @@
+[[source]]
+name = "jfrog"
+url = "https://${ARTIFACTORY_USERNAME}:${ARTIFACTORY_TOKEN}@ramseysolutions.jfrog.io/artifactory/api/pypi/pypi/simple"
+verify_ssl = true
+
+[pipenv]
+allow_prereleases = true
+
+[packages]
+boto3 = "~=1.17"
+requests = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+pytest-mock = "*"
+pytest-xdist = "*"
+pylint = "*"
+black = "==18.9b0"
+
+[requires]
+python_version = "3.7"
